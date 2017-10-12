@@ -1,0 +1,60 @@
+html {
+  background-color: #;
+  font-size: 10px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+/**
+ * Centers each item along the cross axis with align-items.
+ * Makes all flexible items the same length.
+ * Centers the entire item group, if there's extra space.
+ */
+.keys {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex: 1;
+  justify-content: center; 
+}
+
+/**
+ * Set the transition speed and timing function here.
+ */
+.key {
+  width: 10rem;
+  margin: 1rem;
+  padding: 1rem .5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: .4rem solid #000000;
+  border-radius: 1rem .5rem;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 .5rem black;
+  transition: all .07s ease; // Set transition speed and timing function.
+}
+
+/**
+ * Increase the size to make it appear like it's jumping out.
+ */
+.playing {
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+  transform: scale(1.1);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  color: #ffc600;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
