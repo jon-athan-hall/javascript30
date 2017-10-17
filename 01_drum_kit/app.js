@@ -21,7 +21,7 @@ function playSound(e) {
   /**
    * The element's classList can be manipulated using add, remove, toggle.
    */
-  keyElement.classList.add('playing');
+  keyElement.classList.add('key--playing');
 }
 
 /**
@@ -31,7 +31,7 @@ function playSound(e) {
  */
 function removeTransition(e) {
   if (e.propertyName !== 'transform') return;
-  this.classList.remove('playing');
+  this.classList.remove('key--playing');
 }
 
 /**
