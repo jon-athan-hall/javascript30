@@ -7,8 +7,8 @@ function playSound(e) {
   /**
    * An attribute selector with a template string to get the node.
    */
-  const audioElement = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  const keyElement = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  const audioElement = document.querySelector(`audio[data-key='${e.keyCode}']`);
+  const keyElement = document.querySelector(`.key[data-key='${e.keyCode}']`);
   if (!audioElement) return;
 
   /**
