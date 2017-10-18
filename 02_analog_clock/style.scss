@@ -1,0 +1,64 @@
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #0d4f8b;
+  font-size: 10px;
+}
+
+/**
+ * Makes all flexible items the same length.
+ * Centers each item along the cross axis with align-items.
+ */
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex: 1;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/**
+ * The four part box-shadow creates four different box-shadows.
+ */
+.clock {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  margin: 5rem auto;
+  padding: 2rem;
+  border: 2rem solid #000000;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px #000000, 0 0 10px rgba(0, 0, 0, 2);
+
+  /**
+   * The transform accounts for the height of the hand elements.
+   */
+  &__face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+  }
+
+  /**
+   * The transform-origin will base transform off the far right
+   * point on the x-axis now. Start with the 90 degrees to set
+   * all hands to 12 o'clock. Create a unique timing-function
+   * in Inspector, and then copy it here.
+   */
+  &__hand {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 6px;
+    background: #000000;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.5, 0.5, 1);
+  }
+} // .clock
