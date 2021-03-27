@@ -1,0 +1,16 @@
+:root {
+  --base: #e05759;
+  --spacing: 10px;
+  --blur: 10px;
+}
+
+img {
+  width: calc(100% - 2 * var(--spacing));
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
+
+.highlight {
+  color: var(--base);
+}
